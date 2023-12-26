@@ -1,4 +1,4 @@
-package com.ezdream.template
+package com.ezdream.password
 
 import org.junit.Test
 

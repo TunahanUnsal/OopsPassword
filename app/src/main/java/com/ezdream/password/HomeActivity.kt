@@ -1,11 +1,11 @@
-package com.ezdream.template
+package com.ezdream.password
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
-import com.ezdream.template.databinding.ActivityHomeBinding
+import com.ezdream.password.databinding.ActivityHomeBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

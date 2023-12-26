@@ -1,9 +1,9 @@
-package com.ezdream.template
+package com.ezdream.password
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.ezdream.template.util.UiUtil.getDuration
+import com.ezdream.password.util.UiUtil.getDuration
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

@@ -1,12 +1,12 @@
-package com.ezdream.template.ui.pageA
+package com.ezdream.password.ui.pageA
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.ezdream.template.databinding.ItemExampleBinding
-import com.ezdream.template.model.ExampleModel
+import com.ezdream.password.databinding.ItemExampleBinding
+import com.ezdream.password.model.ExampleModel
 
 
 class ExampleListAdapter(private val itemClickListener: ItemClickListener) :

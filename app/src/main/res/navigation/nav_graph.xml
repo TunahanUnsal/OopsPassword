@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/AFragment"
-        android:name="com.ezdream.template.ui.pageA.AFragment"
+        android:name="com.ezdream.password.ui.pageA.AFragment"
         android:label="fragment_a"
         tools:layout="@layout/fragment_a" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/BFragment"
-        android:name="com.ezdream.template.ui.pageB.BFragment"
+        android:name="com.ezdream.password.ui.pageB.BFragment"
         android:label="fragment_b"
         tools:layout="@layout/fragment_b" />
 </navigation>

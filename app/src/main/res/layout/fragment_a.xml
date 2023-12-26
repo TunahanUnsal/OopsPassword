@@ -7,11 +7,11 @@
 
         <variable
             name="itemClickListener"
-            type="com.ezdream.template.ui.pageA.ItemClickListener" />
+            type="com.ezdream.password.ui.pageA.ItemClickListener" />
 
         <variable
             name="viewModel"
-            type="com.ezdream.template.ui.pageA.AFragmentVM" />
+            type="com.ezdream.password.ui.pageA.AFragmentVM" />
 
     </data>
 

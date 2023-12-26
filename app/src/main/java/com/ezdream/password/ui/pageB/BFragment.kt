@@ -1,4 +1,4 @@
-package com.ezdream.template.ui.pageB
+package com.ezdream.password.ui.pageB
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.ezdream.template.databinding.FragmentBBinding
+import com.ezdream.password.databinding.FragmentBBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 

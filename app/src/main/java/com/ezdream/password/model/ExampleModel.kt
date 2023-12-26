@@ -1,4 +1,4 @@
-package com.ezdream.template.model
+package com.ezdream.password.model
 
 data class ExampleModel(
     val id:Int,

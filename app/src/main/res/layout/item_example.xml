@@ -5,11 +5,11 @@
 
         <variable
             name="ExampleModel"
-            type="com.ezdream.template.model.ExampleModel" />
+            type="com.ezdream.password.model.ExampleModel" />
 
         <variable
             name="OnItemClickListener"
-            type="com.ezdream.template.ui.pageA.ItemClickListener" />
+            type="com.ezdream.password.ui.pageA.ItemClickListener" />
 
     </data>
 

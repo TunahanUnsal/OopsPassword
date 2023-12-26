@@ -10,11 +10,11 @@ plugins {
 }
 
 android {
-    namespace = "com.ezdream.template"
+    namespace = "com.ezdream.password"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.ezdream.template"
+        applicationId = "com.ezdream.password"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

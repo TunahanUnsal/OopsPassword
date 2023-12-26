@@ -1,4 +1,4 @@
-package com.ezdream.template.ui.pageA
+package com.ezdream.password.ui.pageA
 
 import android.os.Bundle
 import android.util.Log
@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.ezdream.template.R
-import com.ezdream.template.databinding.FragmentABinding
+import com.ezdream.password.R
+import com.ezdream.password.databinding.FragmentABinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

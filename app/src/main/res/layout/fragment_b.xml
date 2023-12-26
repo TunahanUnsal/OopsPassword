@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.ezdream.template.ui.pageB.BFragmentVM" />
+            type="com.ezdream.password.ui.pageB.BFragmentVM" />
 
     </data>
 

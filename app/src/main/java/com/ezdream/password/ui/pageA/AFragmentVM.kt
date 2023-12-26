@@ -1,8 +1,8 @@
-package com.ezdream.template.ui.pageA
+package com.ezdream.password.ui.pageA
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
-import com.ezdream.template.model.ExampleModel
+import com.ezdream.password.model.ExampleModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

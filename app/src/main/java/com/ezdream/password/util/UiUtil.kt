@@ -1,4 +1,4 @@
-package com.ezdream.template.util
+package com.ezdream.password.util
 
 import android.content.Context
 import android.graphics.Movie

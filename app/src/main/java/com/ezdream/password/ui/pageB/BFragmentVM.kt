@@ -1,4 +1,4 @@
-package com.ezdream.template.ui.pageB
+package com.ezdream.password.ui.pageB
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
