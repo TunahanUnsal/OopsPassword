@@ -22,26 +22,17 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/fragment_a_recycler_view"
-            app:setOnItemClickListener="@{itemClickListener}"
-            app:list="@{viewModel.exampleList}"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:padding="12dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintBottom_toTopOf="@+id/test_text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/test_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{viewModel.text}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="test" />
+            app:list="@{viewModel.passwordList}"
+            app:setOnItemClickListener="@{itemClickListener}" />
+
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fragment_a_fab"
@@ -52,7 +43,7 @@
             android:clickable="true"
             android:contentDescription="@string/flat_icon"
             android:focusable="true"
-            android:src="@android:drawable/btn_star"
+            android:src="@android:drawable/ic_input_add"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 

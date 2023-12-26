@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val duration = getDuration(applicationContext,R.drawable.splash_3)
+        val duration = getDuration(applicationContext,R.drawable.splash)
         val background = object : Thread() {
             override fun run() {
                 try {

@@ -9,8 +9,4 @@ import javax.inject.Inject
 @HiltViewModel
 class BFragmentVM @Inject constructor(application: Application) : AndroidViewModel(application) {
     var text = MutableLiveData(0)
-
-    fun increaseText(){
-        text.value = text.value?.plus(1)
-    }
 }

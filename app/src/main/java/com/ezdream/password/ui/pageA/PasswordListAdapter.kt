@@ -5,16 +5,16 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.ezdream.password.databinding.ItemExampleBinding
-import com.ezdream.password.model.ExampleModel
+import com.ezdream.password.databinding.ItemPasswordBinding
+import com.ezdream.password.model.PasswordModel
 
 
-class ExampleListAdapter(private val itemClickListener: ItemClickListener) :
-    ListAdapter<ExampleModel, ExampleListAdapter.ViewHolder>(ToDoDiffCallBack()) {
-    class ViewHolder(private val binding: ItemExampleBinding) :
+class PasswordListAdapter(private val itemClickListener: ItemClickListener) :
+    ListAdapter<PasswordModel, PasswordListAdapter.ViewHolder>(ToDoDiffCallBack()) {
+    class ViewHolder(private val binding: ItemPasswordBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(itemClickListener: ItemClickListener, exampleModel: ExampleModel) {
-            binding.exampleModel = exampleModel
+        fun bind(itemClickListener: ItemClickListener, passwordModel: PasswordModel) {
+            binding.passwordModel = passwordModel
             binding.onItemClickListener = itemClickListener
 
             binding.executePendingBindings()
@@ -22,7 +22,7 @@ class ExampleListAdapter(private val itemClickListener: ItemClickListener) :
 
         companion object {
             fun from(parent: ViewGroup): ViewHolder {
-                val binding = ItemExampleBinding.inflate(
+                val binding = ItemPasswordBinding.inflate(
                     LayoutInflater.from(parent.context),
                     parent,
                     false
@@ -34,12 +34,12 @@ class ExampleListAdapter(private val itemClickListener: ItemClickListener) :
 
     }
 
-    private class ToDoDiffCallBack : DiffUtil.ItemCallback<ExampleModel>() {
-        override fun areItemsTheSame(oldItem: ExampleModel, newItem: ExampleModel): Boolean {
+    private class ToDoDiffCallBack : DiffUtil.ItemCallback<PasswordModel>() {
+        override fun areItemsTheSame(oldItem: PasswordModel, newItem: PasswordModel): Boolean {
             return oldItem.id == newItem.id
         }
 
-        override fun areContentsTheSame(oldItem: ExampleModel, newItem: ExampleModel): Boolean {
+        override fun areContentsTheSame(oldItem: PasswordModel, newItem: PasswordModel): Boolean {
             return oldItem.areContentsTheSame(newItem)
         }
 

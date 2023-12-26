@@ -1,44 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
             type="com.ezdream.password.ui.pageB.BFragmentVM" />
 
+        <variable
+            name="PasswordModel"
+            type="com.ezdream.password.model.PasswordModel" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="12dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".ui.pageA.AFragment">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/test_text"
-            android:layout_width="wrap_content"
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{viewModel.text.toString()}"
-            tools:text="test"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="10dp"
+            app:cardElevation="6dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fragment_b_fab"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="12dp">
+
+                <EditText
+                    android:id="@+id/title"
+                    android:hint="@string/title_hint"
+                    style="@style/MaterialAlertDialog.Material3.Title.Text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp"
+                    android:text="@{PasswordModel.title}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <EditText
+                    android:id="@+id/username"
+                    style="@style/MaterialAlertDialog.Material3.Body.Text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textCursorDrawable="@null"
+                    android:padding="6dp"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/username_hint"
+                    android:text="@{PasswordModel.username}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/title" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/password_text_input_layout"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/username"
+                    app:passwordToggleEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/password"
+                        style="@style/MaterialAlertDialog.Material3.Body.Text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="textPassword"
+                        android:hint="@string/password_hint"
+                        android:padding="6dp"
+                        android:text="@{PasswordModel.password}"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <Button
+            android:id="@+id/save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="@{() -> viewModel.increaseText()}"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="32dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:src="@android:drawable/ic_menu_revert"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/save"
+            android:layout_marginTop="24dp"
             app:layout_constraintEnd_toEndOf="parent"
-            android:contentDescription="@string/flat_icon" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
+
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/save" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </layout>
