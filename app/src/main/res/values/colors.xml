@@ -1,6 +1,7 @@
 
 <resources>
     <color name="seed">#000000</color>
+    <color name="back_button_color">#984061</color>
     <color name="md_theme_light_primary">#984061</color>
     <color name="md_theme_light_onPrimary">#FFFFFF</color>
     <color name="md_theme_light_primaryContainer">#FFD9E2</color>

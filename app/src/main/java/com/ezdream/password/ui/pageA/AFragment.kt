@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.ezdream.password.R
 import com.ezdream.password.databinding.FragmentABinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -28,16 +27,13 @@ class AFragment : Fragment(), ItemClickListener {
 
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
+        binding.itemClickListener = this
 
-        viewModel.addData()
-        viewModel.addData()
-        viewModel.addData()
 
         binding.fragmentAFab.setOnClickListener {
-            findNavController().navigate(R.id.action_AFragment_to_BFragment)
+            val action = AFragmentDirections.actionAFragmentToBFragment(-1)
+            findNavController().navigate(action)
         }
-
-        binding.itemClickListener = this
 
         return binding.root
     }
@@ -48,7 +44,9 @@ class AFragment : Fragment(), ItemClickListener {
     }
 
     override fun onClick(id: Int) {
-        Log.i("TAG", "onClick")
+        Log.i("TAG", "onClick: $id")
+        val action = AFragmentDirections.actionAFragmentToBFragment(id)
+        findNavController().navigate(action)
     }
 
 }

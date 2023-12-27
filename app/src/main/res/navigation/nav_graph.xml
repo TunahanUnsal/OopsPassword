@@ -13,10 +13,20 @@
         <action
             android:id="@+id/action_AFragment_to_BFragment"
             app:destination="@id/BFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/BFragment"
         android:name="com.ezdream.password.ui.pageB.BFragment"
         android:label="fragment_b"
-        tools:layout="@layout/fragment_b" />
+        tools:layout="@layout/fragment_b" >
+
+        <argument
+            android:name="passwordId"
+            android:defaultValue="-1"
+            app:argType="integer" />
+
+    </fragment>
+
+
 </navigation>
